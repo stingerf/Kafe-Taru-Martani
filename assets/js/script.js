@@ -118,7 +118,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
       setTimeout(() => {
         hiddenText.style.opacity = "0";
-      }, 1000); // Muncul selama 1 detik
-    }, 3000); // Setiap 3 detik
+      }, 800); // Muncul selama 0.8 detik
+    }, 2000); // Setiap 2 detik
   }
+});
+
+// Fungsi untuk menampilkan pop-up
+function openPopup2() {
+  document.getElementById("popup-2").style.display = "flex";
+}
+
+// Fungsi untuk menutup pop-up
+function closePopup2() {
+  document.getElementById("popup-2").style.display = "none";
+}
+
+// Tambahkan event listener ke tombol "Beli Sekarang"
+document.querySelector(".btn-primary-2").addEventListener("click", function(event) {
+  event.preventDefault(); // Mencegah link default
+  openPopup2();
 });
