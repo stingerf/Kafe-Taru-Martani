@@ -581,6 +581,16 @@ body {
 
 .collection-card span{
   color: var(--white);
+  background-color: var(--cultured-2);
+  padding: 0.5em;
+  border-radius: 2em;
+}
+
+.collection-card:hover span{
+  color: var(--white);
+  background-color: var(--cubic-out);
+  padding: 0.5em;
+  border-radius: 2em;
 }
 
 .collection-card .card-title { margin-block-end: 12px; color: var(--white);}

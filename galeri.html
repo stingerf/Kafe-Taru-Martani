@@ -1,105 +1,265 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Kafe Taru Martani </title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background-color: #D2B48C; /* Coklat muda */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        .gallery-container {
-            width: 100%;
-            max-width: 1000px;
-            overflow-x: auto; /* Scroll jika tidak muat */
-            white-space: nowrap;
-            padding: 10px;
-        }
-
-        .gallery {
-            display: flex;
-            gap: 15px;
-        }
-
-        .gallery img {
-            width: 400px;
-            height: 500px;
-            object-fit: cover;
-            border-radius: 10px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .gallery img:hover {
-            opacity: 0.9;
-            color: white;
-        }
-
-        .back-button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #8B4513; /* Coklat tua */
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            text-align: center;
-            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-            transition: background 0.3s;
-        }
-
-        .back-button:hover {
-            background-color: #5A2E0F;
-        }
-
-        /* Membuat scroll tampak lebih bagus */
-        .gallery-container::-webkit-scrollbar {
-            height: 8px;
-        }
-
-        .gallery-container::-webkit-scrollbar-thumb {
-            background: #8B4513;
-            border-radius: 10px;
-        }
-
-        .gallery-container::-webkit-scrollbar-track {
-            background: #D2B48C;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menu - Taru Martani</title>
+  <link rel="stylesheet" href="/assets/css/menu.css" />
+  <link rel="shortcut icon" href="/assets/images/logotarumartani.webp" type="image/svg+xml">
 </head>
 <body>
+  <header>
+    <h1>Taru Martani 1918 Coffee & Resto</h1>
+    <p>Menu Makanan & Minuman</p>
+  </header>
 
-    <div class="gallery-container">
-        <div class="gallery">
-            <img src="/assets/images/menu1.webp" alt="Gambar 1">
-            <img src="/assets/images/menu2.webp" alt="Gambar 2">
-            <img src="/assets/images/menu3.jpg" alt="Gambar 3">
-            <img src="/assets/images/menu4.webp" alt="Gambar 4">
+  <main class="menu-container">
+    <section class="menu-section">
+      <h2>Squash & Others</h2>
+      <div class="menu-grid">
+        <div class="menu-card">
+            <img src="/assets/images/menu/peach.webp" alt="Peach Squash">
+            <div class="menu-info">
+              <h3>Peach Squash</h3>
+              <p>18k</p>
+            </div>
         </div>
-    </div>
+        <div class="menu-card">
+            <img src="/assets/images/menu/lime.webp" alt="Lime Squash">
+            <div class="menu-info">
+              <h3>Lime Squash</h3>
+              <p>18k</p>
+            </div>
+          </div>
+          
+          <div class="menu-card">
+            <img src="/assets/images/menu/merahputih.webp" alt="Es Merah Putih">
+            <div class="menu-info">
+              <h3>Es Merah Putih</h3>
+              <p>18k</p>
+            </div>
+          </div>
+          
+          <div class="menu-card">
+            <img src="/assets/images/menu/surgaD.webp" alt="Suro Gendruwo">
+            <div class="menu-info">
+              <h3>Surga Dunia</h3>
+              <p>20k</p>
+            </div>
+          </div>
+          
+          <div class="menu-card">
+            <img src="/assets/images/menu/dpurple.webp" alt="Deep Purple">
+            <div class="menu-info">
+              <h3>Deep Purple</h3>
+              <p>18k</p>
+            </div>
+          </div>
+          
+          <div class="menu-card">
+            <img src="/assets/images/menu/lychee.webp" alt="Lychee Squash">
+            <div class="menu-info">
+              <h3>Lychee Squash</h3>
+              <p>18k</p>
+            </div>
+          </div>
+          
+          <div class="menu-card">
+            <img src="/assets/images/menu/straw.webp" alt="Strawberry Squash">
+            <div class="menu-info">
+              <h3>Strawberry Squash</h3>
+              <p>18k</p>
+            </div>
+          </div>
+          
+          <div class="menu-card">
+            <img src="/assets/images/menu/wedangjahe.webp" alt="Wodang Jahe Serem">
+            <div class="menu-info">
+              <h3>Wedang Jahe Serem</h3>
+              <p>15k</p>
+            </div>
+          </div>
+          
+          <div class="menu-card">
+            <img src="/assets/images/menu/kopior.webp" alt="Es Kopior">
+            <div class="menu-info">
+              <h3>Es Kopior</h3>
+              <p>18k</p>
+            </div>
+          </div>          
+      </div>
+    </section>
 
-    <button class="back-button" onclick="goBack()">Back</button>
+    <section class="menu-section">
+      <h2>Espresso Based</h2>
+      <div class="menu-grid">
+        <div class="menu-card">
+            <img src="/assets/images/menu/espresso.webp" alt="Espresso">
+            <div class="menu-info">
+              <h3>Espresso</h3>
+              <p>10k</p>
+            </div>
+          </div>
+          
+          <div class="menu-card">
+            <img src="/assets/images/menu/Americano.webp" alt="Americano">
+            <div class="menu-info">
+              <h3>Americano</h3>
+              <p>10k</p>
+            </div>
+          </div>
+          
+          <div class="menu-card">
+            <img src="/assets/images/menu/cappucino.webp" alt="Cappuccino">
+            <div class="menu-info">
+              <h3>Cappuccino</h3>
+              <p>15k</p>
+            </div>
+          </div>
+          
+          <div class="menu-card">
+            <img src="/assets/images/menu/coffee-latte.webp" alt="Coffee Latte">
+            <div class="menu-info">
+              <h3>Coffee Latte</h3>
+              <p>15k</p>
+            </div>
+          </div>
+          
+          <div class="menu-card">
+            <img src="/assets/images/menu/kopi susu.webp" alt="Kopi Susu Large">
+            <div class="menu-info">
+              <h3>Kopi Susu Large</h3>
+              <p>15k</p>
+            </div>
+          </div>
+          
+          <div class="menu-card">
+            <img src="/assets/images/menu/caramelM.webp" alt="Caramel Macchiato">
+            <div class="menu-info">
+              <h3>Caramel Macchiato</h3>
+              <p>20k</p>
+            </div>
+          </div>
+          
+          <div class="menu-card">
+            <img src="/assets/images/menu/matcha.webp" alt="Matcha Latte">
+            <div class="menu-info">
+              <h3>Matcha Latte</h3>
+              <p>23k</p>
+            </div>
+          </div>          
+      </div>
+    </section>
 
-    <script>
-        function goBack() {
-            window.history.back();
-        }
-    </script>
+    <section class="menu-section">
+      <h2>Main Course</h2>
+      <div class="menu-grid">
+        <div class="menu-card">
+            <img src="/assets/images/menu/NGKemangi.webp" alt="Nasi Goreng Kemangi">
+            <div class="menu-info">
+              <h3>Nasi Goreng Kemangi</h3>
+              <p>20k</p>
+            </div>
+          </div>
+          
+          <div class="menu-card">
+            <img src="/assets/images/menu/orien.webp" alt="Nasi Goreng Oriental">
+            <div class="menu-info">
+              <h3>Nasi Goreng Oriental</h3>
+              <p>20k</p>
+            </div>
+          </div>
+          
+          <div class="menu-card">
+            <img src="/assets/images/menu/NGKemangi.webp" alt="Nasi Goreng Taru Martani">
+            <div class="menu-info">
+              <h3>Nasi Goreng Taru Martani</h3>
+              <p>20k</p>
+            </div>
+          </div>
+          
+          <div class="menu-card">
+            <img src="/assets/images/menu/matah RB.webp" alt="Ricebowl Sambal Matah">
+            <div class="menu-info">
+              <h3>Ricebowl Sambal Matah</h3>
+              <p>25k</p>
+            </div>
+          </div>
+          
+          <div class="menu-card">
+            <img src="/assets/images/menu/chckn katsu.webp" alt="Chicken Katsu">
+            <div class="menu-info">
+              <h3>Chicken Katsu</h3>
+              <p>28k</p>
+            </div>
+          </div>
+          
+          <div class="menu-card">
+            <img src="/assets/images/menu/CSBpaper.webp" alt="Chicken Steak Blackpepper">
+            <div class="menu-info">
+              <h3>Chicken Steak Blackpepper</h3>
+              <p>35k</p>
+            </div>
+          </div>          
+      </div>
+    </section>
 
+    <section class="menu-section">
+      <h2>Milk & Tea</h2>
+      <div class="menu-grid">
+        <div class="menu-card">
+            <img src="/assets/images/menu/BlueM.webp" alt="Blue Matcha">
+            <div class="menu-info">
+              <h3>Blue Matcha</h3>
+              <p>18k</p>
+            </div>
+          </div>
+          
+          <div class="menu-card">
+            <img src="/assets/images/menu/taro.webp" alt="Taro">
+            <div class="menu-info">
+              <h3>Taro</h3>
+              <p>18k</p>
+            </div>
+          </div>
+          
+          <div class="menu-card">
+            <img src="/assets/images/menu/thaiti.webp" alt="Thai Tea">
+            <div class="menu-info">
+              <h3>Thai Tea</h3>
+              <p>18k</p>
+            </div>
+          </div>
+          
+          <div class="menu-card">
+            <img src="/assets/images/menu/magic tea.webp" alt="Magic Tea">
+            <div class="menu-info">
+              <h3>Magic Tea</h3>
+              <p>18k</p>
+            </div>
+          </div>
+          
+          <div class="menu-card">
+            <img src="/assets/images/menu/peach tea.webp" alt="Peach Tea">
+            <div class="menu-info">
+              <h3>Peach Tea</h3>
+              <p>18k</p>
+            </div>
+          </div>
+          
+      </div>
+    </section>
+  </main>
+
+  <button class="back-button" onclick="window.location.href='index.html'">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+    </svg>
+    <span class="back-text">Kembali Ke Halaman Utama</span>
+  </button>
+
+  <footer>
+    <p>&copy; 2025 Taru Martani 1918 Coffee & Resto</p>
+  </footer>
 </body>
 </html>
