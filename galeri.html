@@ -14,6 +14,60 @@
   </header>
 
   <main class="menu-container">
+
+    <section class="menu-section">
+      <h2>Main Course</h2>
+      <div class="menu-grid">
+        <div class="menu-card">
+            <img src="/assets/images/menu/NGKemangi.webp" alt="Nasi Goreng Kemangi">
+            <div class="menu-info">
+              <h3>Nasi Goreng Kemangi</h3>
+              <p>20k</p>
+            </div>
+          </div>
+          
+          <div class="menu-card">
+            <img src="/assets/images/menu/orien.webp" alt="Nasi Goreng Oriental">
+            <div class="menu-info">
+              <h3>Nasi Goreng Oriental</h3>
+              <p>20k</p>
+            </div>
+          </div>
+          
+          <div class="menu-card">
+            <img src="/assets/images/menu/NGKemangi.webp" alt="Nasi Goreng Taru Martani">
+            <div class="menu-info">
+              <h3>Nasi Goreng Taru Martani</h3>
+              <p>20k</p>
+            </div>
+          </div>
+          
+          <div class="menu-card">
+            <img src="/assets/images/menu/matah RB.webp" alt="Ricebowl Sambal Matah">
+            <div class="menu-info">
+              <h3>Ricebowl Sambal Matah</h3>
+              <p>25k</p>
+            </div>
+          </div>
+          
+          <div class="menu-card">
+            <img src="/assets/images/menu/chckn katsu.webp" alt="Chicken Katsu">
+            <div class="menu-info">
+              <h3>Chicken Katsu</h3>
+              <p>28k</p>
+            </div>
+          </div>
+          
+          <div class="menu-card">
+            <img src="/assets/images/menu/CSBpaper.webp" alt="Chicken Steak Blackpepper">
+            <div class="menu-info">
+              <h3>Chicken Steak Blackpepper</h3>
+              <p>35k</p>
+            </div>
+          </div>          
+      </div>
+    </section>
+
     <section class="menu-section">
       <h2>Squash & Others</h2>
       <div class="menu-grid">
@@ -152,59 +206,6 @@
     </section>
 
     <section class="menu-section">
-      <h2>Main Course</h2>
-      <div class="menu-grid">
-        <div class="menu-card">
-            <img src="/assets/images/menu/NGKemangi.webp" alt="Nasi Goreng Kemangi">
-            <div class="menu-info">
-              <h3>Nasi Goreng Kemangi</h3>
-              <p>20k</p>
-            </div>
-          </div>
-          
-          <div class="menu-card">
-            <img src="/assets/images/menu/orien.webp" alt="Nasi Goreng Oriental">
-            <div class="menu-info">
-              <h3>Nasi Goreng Oriental</h3>
-              <p>20k</p>
-            </div>
-          </div>
-          
-          <div class="menu-card">
-            <img src="/assets/images/menu/NGKemangi.webp" alt="Nasi Goreng Taru Martani">
-            <div class="menu-info">
-              <h3>Nasi Goreng Taru Martani</h3>
-              <p>20k</p>
-            </div>
-          </div>
-          
-          <div class="menu-card">
-            <img src="/assets/images/menu/matah RB.webp" alt="Ricebowl Sambal Matah">
-            <div class="menu-info">
-              <h3>Ricebowl Sambal Matah</h3>
-              <p>25k</p>
-            </div>
-          </div>
-          
-          <div class="menu-card">
-            <img src="/assets/images/menu/chckn katsu.webp" alt="Chicken Katsu">
-            <div class="menu-info">
-              <h3>Chicken Katsu</h3>
-              <p>28k</p>
-            </div>
-          </div>
-          
-          <div class="menu-card">
-            <img src="/assets/images/menu/CSBpaper.webp" alt="Chicken Steak Blackpepper">
-            <div class="menu-info">
-              <h3>Chicken Steak Blackpepper</h3>
-              <p>35k</p>
-            </div>
-          </div>          
-      </div>
-    </section>
-
-    <section class="menu-section">
       <h2>Milk & Tea</h2>
       <div class="menu-grid">
         <div class="menu-card">
@@ -249,6 +250,23 @@
           
       </div>
     </section>
+
+    <!-- Tombol untuk menampilkan gambar promo -->
+    <button class="show-images-btn" onclick="toggleImages()">Tampilkan Gambar Lebihnya</button>
+
+    <!-- Container untuk galeri gambar -->
+    <div class="image-gallery" id="imageGallery">
+      <img src="/assets/images/menu4.webp" alt="Gambar Promo 1">
+      <img src="/assets/images/menu3.webp" alt="Gambar Promo 2">
+      <img src="/assets/images/menu5.webp" alt="Gambar Promo 3">
+      <img src="/assets/images/menu6.webp" alt="Gambar Promo 4">
+    </div>
+
+    <!-- Overlay untuk gambar diperbesar -->
+    <div class="image-overlay" id="imageOverlay">
+      <img src="" alt="Gambar Diperbesar" id="enlargedImage">
+      <button class="close-btn" onclick="closeOverlay()">×</button>
+    </div>
   </main>
 
   <button class="back-button" onclick="window.location.href='index.html'">
@@ -259,7 +277,36 @@
   </button>
 
   <footer>
-    <p>&copy; 2025 Taru Martani 1918 Coffee & Resto</p>
+    <p>© 2025 Taru Martani 1918 Coffee & Resto</p>
   </footer>
-</body>
+
+  <script>
+    function toggleImages() {
+      const gallery = document.getElementById('imageGallery');
+      gallery.classList.toggle('active');
+    }
+
+    function openOverlay(imageSrc) {
+      const overlay = document.getElementById('imageOverlay');
+      const enlargedImage = document.getElementById('enlargedImage');
+      enlargedImage.src = imageSrc;
+      overlay.classList.add('active');
+    }
+
+    function closeOverlay() {
+      const overlay = document.getElementById('imageOverlay');
+      overlay.classList.remove('active');
+    }
+
+    // Tambahkan event listener untuk setiap gambar di galeri
+    document.addEventListener('DOMContentLoaded', () => {
+      const galleryImages = document.querySelectorAll('#imageGallery img');
+      galleryImages.forEach(img => {
+        img.addEventListener('click', () => {
+          openOverlay(img.src);
+        });
+      });
+    });
+  </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9393d844eaf7b097',t:'MTc0NjE1MDM4NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>

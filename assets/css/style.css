@@ -588,7 +588,7 @@ body {
 
 .collection-card:hover span{
   color: var(--white);
-  background-color: var(--cubic-out);
+  background-color: var(--hoockers-green);
   padding: 0.5em;
   border-radius: 2em;
 }
