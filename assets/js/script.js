@@ -138,3 +138,5 @@ document.querySelector(".btn-primary-2").addEventListener("click", function(even
   event.preventDefault(); // Mencegah link default
   openPopup2();
 });
+document.getElementById('contactForm').addEventListener('submit', function(event) { event.preventDefault(); 
+this.reset(); alert('Terima kasih atas masukan Anda!'); });
